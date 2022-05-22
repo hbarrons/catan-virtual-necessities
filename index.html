@@ -10,12 +10,48 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Catan</h1>
+  <h1 class="title">Catan Necessities</h1>
+  <h3 class="title">Bank</h3>
+  <div class="development-cards">
+    <select name="development-cards">
+      <option value="default">Development Cards</option>
+      <option value="knight">Knight</option>
+      <option value="year-of-plenty">Year of Plenty</option>
+      <option value="road-building">Road Building</option>
+      <option value="monolopy">Monopoly</option>
+      <option value="victory-point">Victory Point</option>
+    </select>
+  </div>
   <div class="card-bank">
     <img src="img/wood.png" alt="wood">
     <img src="img/brick.png" alt="brick">
     <img src="img/wheat.png" alt="wheat">
     <img src="img/rock.png" alt="rock">
     <img src="img/sheep.png" alt="sheep">
+  </div>
+  <h3 class="title">Player Card's</h3>
+  <div class="development-cards">
+    <select name="development-cards">
+      <option value="default">Play a Development Card?</option>
+      <option value="knight" hidden="ture">Knight</option>
+      <option value="year-of-plenty" hidden="ture">Year of Plenty</option>
+      <option value="road-building" hidden="ture">Road Building</option>
+      <option value="monolopy" hidden="ture">Monopoly</option>
+      <option value="victory-point" hidden="ture">Victory Point</option>
+    </select>
+  </div>
+  <div class="card-bank">
+    <img src="img/wood.png" alt="wood">
+    <img src="img/brick.png" alt="brick">
+    <img src="img/wheat.png" alt="wheat">
+    <p class="player-count wood-count"></p>
+    <p class="player-count brick-count"></p>
+    <p class="player-count wheat-count"></p>
+    <img src="img/rock.png" alt="rock">
+    <img src="img/sheep.png" alt="sheep">
+  </div>
+  <div class="additional-count">
+    <p class="player-count rock-count"></p>
+    <p class="player-count sheep-count"></p>
   </div>
 </body>

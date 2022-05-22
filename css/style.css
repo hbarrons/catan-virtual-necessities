@@ -2,7 +2,38 @@ body {
   background-color: #64BDDB;
 }
 
+.title {
+  text-align: center;
+  color: darkred; 
+}
+
 img {
-  height: 200px;
-  margin: 20px;
+  height: 100px;
+  margin: 10px;
+  text-align: center;
+}
+
+.development-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-bank {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-count {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.additional-count {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
