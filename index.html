@@ -13,14 +13,15 @@
   <h1 class="title">Catan Necessities</h1>
   <h3 class="title">Bank</h3>
   <div class="development-cards">
-    <select name="development-cards">
+    <select name="development-cards" id="bank-dev-cards">
       <option value="default">Development Cards</option>
-      <option value="knight">Knight</option>
-      <option value="year-of-plenty">Year of Plenty</option>
-      <option value="road-building">Road Building</option>
-      <option value="monolopy">Monopoly</option>
-      <option value="victory-point">Victory Point</option>
+      <option value="Knight">Knight</option>
+      <option value="Year of Plenty">Year of Plenty</option>
+      <option value="Road Building">Road Building</option>
+      <option value="Monolopy">Monopoly</option>
+      <option value="Victory Point">Victory Point</option>
     </select>
+    <button id="add-dev-card">Add</button>
   </div>
   <div class="card-bank">
     <img src="img/wood.png" alt="wood" id="wood-bank">
@@ -31,27 +32,23 @@
   </div>
   <h3 class="title">Player Card's</h3>
   <div class="development-cards">
-    <select name="development-cards">
+    <select name="player-development-cards" id="player-dev-cards">
       <option value="default">Play a Development Card?</option>
-      <option value="knight" hidden="ture">Knight</option>
-      <option value="year-of-plenty" hidden="ture">Year of Plenty</option>
-      <option value="road-building" hidden="ture">Road Building</option>
-      <option value="monolopy" hidden="ture">Monopoly</option>
-      <option value="victory-point" hidden="ture">Victory Point</option>
     </select>
+    <button>Use</button>
   </div>
   <div class="card-bank">
-    <img src="img/wood.png" alt="wood-player">
-    <img src="img/brick.png" alt="brick-player">
-    <img src="img/wheat.png" alt="wheat-player">
-    <p class="player-count wood-count"></p>
-    <p class="player-count brick-count"></p>
-    <p class="player-count wheat-count"></p>
-    <img src="img/rock.png" alt="rock-player">
-    <img src="img/sheep.png" alt="sheep-player">
+    <img src="img/wood.png" alt="wood" id="wood-player">
+    <img src="img/brick.png" alt="brick" id="brick-player">
+    <img src="img/wheat.png" alt="wheat" id="wheat-player">
+    <p class="player-count" id="wood-count"></p>
+    <p class="player-count" id="brick-count"></p>
+    <p class="player-count" id="wheat-count"></p>
+    <img src="img/rock.png" alt="rock" id="rock-player">
+    <img src="img/sheep.png" alt="sheep" id="sheep-player">
   </div>
   <div class="additional-count">
-    <p class="player-count rock-count"></p>
-    <p class="player-count sheep-count"></p>
+    <p class="player-count" id="rock-count"></p>
+    <p class="player-count" id="sheep-count"></p>
   </div>
 </body>

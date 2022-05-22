@@ -8,13 +8,14 @@ let brickBank = document.getElementById("brick-bank")
 let wheatBank = document.getElementById("wheat-bank")
 let rockBank = document.getElementById("rock-bank")
 let sheepBank = document.getElementById("sheep-bank")
-
-//event listeners
-woodBank.addEventListener('click', addWood)
-brickBank.addEventListener('click', addBrick)
-wheatBank.addEventListener('click', addWheat)
-rockBank.addEventListener('click', addRock)
-sheepBank.addEventListener('click', addSheep)
+let woodPlayer = document.getElementById("wood-player")
+let brickPlayer = document.getElementById("brick-player")
+let wheatPlayer = document.getElementById("wheat-player")
+let rockPlayer = document.getElementById("rock-player")
+let sheepPlayer = document.getElementById("sheep-player")
+let selectDevCard = document.getElementById("bank-dev-cards")
+let addDevCardBtn = document.getElementById("add-dev-card")
+let playerDevCard = document.getElementById("player-dev-cards")
 
 
 //variables
@@ -24,38 +25,94 @@ let wheatCount = 0
 let rockCount = 0
 let sheepCount = 0 
 
+//event listeners
+woodBank.addEventListener('click', addWood)
+brickBank.addEventListener('click', addBrick)
+wheatBank.addEventListener('click', addWheat)
+rockBank.addEventListener('click', addRock)
+sheepBank.addEventListener('click', addSheep)
+woodPlayer.addEventListener('click', subtractWood)
+brickPlayer.addEventListener('click', subtractBrick)
+wheatPlayer.addEventListener('click', subtractWheat)
+rockPlayer.addEventListener('click', subtractRock)
+sheepPlayer.addEventListener('click', subtractSheep)
+addDevCardBtn.addEventListener('click', addDevCard)
+
+
+
+
+
 
 init()
 function init () {
-  // woodPlayer.innerHTML = 0
-  // brickPlayer.innerHTML = 0
-  // wheatPlayer.innerHTML = 0
-  // rockPlayer.innerHTML = 0
-  // sheepPlayer.innerHTML = 0
+  woodPlayerCount.innerHTML = parseInt(woodCount)
+  brickPlayerCount.innerHTML = parseInt(brickCount)
+  wheatPlayerCount.innerHTML = parseInt(wheatCount)
+  rockPlayerCount.innerHTML = parseInt(rockCount)
+  sheepPlayerCount.innerHTML = parseInt(sheepCount)
   console.log("hit")
 }
 
 function addWood () {
   woodCount += 1
-  console.log("woodCount", woodCount)
+  woodPlayerCount.innerHTML = parseInt(woodCount)
 }
 
 function addBrick () {
   brickCount += 1
-  console.log("brickCount", brickCount)
+  brickPlayerCount.innerHTML = parseInt(brickCount)
 }
 
 function addWheat () {
   wheatCount += 1
-  console.log("wheatCount", wheatCount)
+  wheatPlayerCount.innerHTML = parseInt(wheatCount)
 }
 
 function addRock () {
   rockCount += 1
-  console.log("rockCount", rockCount)
+  rockPlayerCount.innerHTML = parseInt(rockCount)
 }
 
 function addSheep () {
   sheepCount += 1
-  console.log("sheepCount", sheepCount)
+  sheepPlayerCount.innerHTML = parseInt(sheepCount)
+}
+
+function subtractWood () {
+  if (woodCount > 0) {
+    woodCount -= 1
+  }
+  woodPlayerCount.innerHTML = parseInt(woodCount)
+}
+
+function subtractBrick () {
+  if (brickCount > 0) {
+    brickCount -= 1
+  }
+  brickPlayerCount.innerHTML = parseInt(brickCount)
+}
+
+function subtractWheat () {
+  if (wheatCount > 0) {
+    wheatCount -= 1
+  }
+  wheatPlayerCount.innerHTML = parseInt(wheatCount)
+}
+
+function subtractRock () {
+  if (rockCount > 0) {
+    rockCount -= 1
+  }
+  rockPlayerCount.innerHTML = parseInt(rockCount)
+}
+
+function subtractSheep () {
+  if (sheepCount > 0) {
+    sheepCount -= 1
+  }
+  sheepPlayerCount.innerHTML = parseInt(sheepCount)
+}
+
+function addDevCard () {
+  console.log(selectDevCard.options[selectDevCard.selectedIndex].value)
 }
