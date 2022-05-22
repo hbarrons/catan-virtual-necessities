@@ -16,7 +16,7 @@ let sheepPlayer = document.getElementById("sheep-player")
 let selectDevCard = document.getElementById("bank-dev-cards")
 let addDevCardBtn = document.getElementById("add-dev-card")
 let playerDevCard = document.getElementById("player-dev-cards")
-// let devCard = document.createElement("option")
+let useDevCardBtn = document.getElementById("use-dev-card")
 
 
 //variables
@@ -39,6 +39,7 @@ wheatPlayer.addEventListener('click', subtractWheat)
 rockPlayer.addEventListener('click', subtractRock)
 sheepPlayer.addEventListener('click', subtractSheep)
 addDevCardBtn.addEventListener('click', addDevCard)
+useDevCardBtn.addEventListener('click', useDevCard)
 
 
 
@@ -127,6 +128,11 @@ function addDevCard () {
   // playerDevCard.add(devCard, devCardCount)
   // devCardCount += 1
   // console.log(devCardCount)
+}
+
+function useDevCard () {
+  let usedDevCard = playerDevCard.options[playerDevCard.selectedIndex].value
+  console.log(usedDevCard)
 }
 
 
