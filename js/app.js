@@ -16,6 +16,7 @@ let sheepPlayer = document.getElementById("sheep-player")
 let selectDevCard = document.getElementById("bank-dev-cards")
 let addDevCardBtn = document.getElementById("add-dev-card")
 let playerDevCard = document.getElementById("player-dev-cards")
+// let devCard = document.createElement("option")
 
 
 //variables
@@ -24,6 +25,7 @@ let brickCount = 0
 let wheatCount = 0
 let rockCount = 0
 let sheepCount = 0 
+let devCardCount = 1
 
 //event listeners
 woodBank.addEventListener('click', addWood)
@@ -114,5 +116,17 @@ function subtractSheep () {
 }
 
 function addDevCard () {
-  console.log(selectDevCard.options[selectDevCard.selectedIndex].value)
+  let devCard = selectDevCard.options[selectDevCard.selectedIndex].value
+  console.log(devCard)
+  $('#player-dev-cards').append(`<option value="${devCard}">${devCard}</option>`)  
+
+
+
+  // devCard.text = selectDevCard.options[selectDevCard.selectedIndex].value
+  // console.log(devCardCount)
+  // playerDevCard.add(devCard, devCardCount)
+  // devCardCount += 1
+  // console.log(devCardCount)
 }
+
+
