@@ -119,20 +119,13 @@ function subtractSheep () {
 function addDevCard () {
   let devCard = selectDevCard.options[selectDevCard.selectedIndex].value
   console.log(devCard)
-  $('#player-dev-cards').append(`<option value="${devCard}">${devCard}</option>`)  
-
-
-
-  // devCard.text = selectDevCard.options[selectDevCard.selectedIndex].value
-  // console.log(devCardCount)
-  // playerDevCard.add(devCard, devCardCount)
-  // devCardCount += 1
-  // console.log(devCardCount)
+  $('#player-dev-cards').append(`<option value="${devCard}">${devCard}</option>`)
 }
 
 function useDevCard () {
   let usedDevCard = playerDevCard.options[playerDevCard.selectedIndex].value
   console.log(usedDevCard)
+  $(`#player-dev-cards option[value='${usedDevCard}']`).remove()
 }
 
 
