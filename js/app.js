@@ -1,49 +1,61 @@
-let woodCount = document.getElementById("wood-count")
-let brickCount = document.getElementById("brick-count")
-let wheatCount = document.getElementById("wheat-count")
-let rockCount = document.getElementById("rock-count")
-let sheepCount = document.getElementById("sheep-count")
-
-let wood = document.getElementById("wood-bank")
-let brick = document.getElementById("brick-bank")
-let wheat = document.getElementById("wheat-bank")
-let rock = document.getElementById("rock-bank")
-let sheep = document.getElementById("sheep-bank")
+let woodPlayerCount = document.getElementById("wood-count")
+let brickPlayerCount = document.getElementById("brick-count")
+let wheatPlayerCount = document.getElementById("wheat-count")
+let rockPlayerCount = document.getElementById("rock-count")
+let sheepPlayerCount = document.getElementById("sheep-count")
+let woodBank = document.getElementById("wood-bank")
+let brickBank = document.getElementById("brick-bank")
+let wheatBank = document.getElementById("wheat-bank")
+let rockBank = document.getElementById("rock-bank")
+let sheepBank = document.getElementById("sheep-bank")
 
 //event listeners
-wood.addEventListener('click', addWood)
-brick.addEventListener('click', addBrick)
-wheat.addEventListener('click', addWheart)
-rock.addEventListener('click', addRock)
-sheep.addEventListener('click', addSheep)
+woodBank.addEventListener('click', addWood)
+brickBank.addEventListener('click', addBrick)
+wheatBank.addEventListener('click', addWheat)
+rockBank.addEventListener('click', addRock)
+sheepBank.addEventListener('click', addSheep)
 
+
+//variables
+let woodCount = 0
+let brickCount = 0
+let wheatCount = 0
+let rockCount = 0
+let sheepCount = 0 
 
 
 init()
 function init () {
-  woodCount.innerHTML = 0
-  brickCount.innerHTML = 0
-  wheatCount.innerHTML = 0
-  rockCount.innerHTML = 0
-  sheepCount.innerHTML = 0
+  // woodPlayer.innerHTML = 0
+  // brickPlayer.innerHTML = 0
+  // wheatPlayer.innerHTML = 0
+  // rockPlayer.innerHTML = 0
+  // sheepPlayer.innerHTML = 0
+  console.log("hit")
 }
 
 function addWood () {
-  console.log("add wood")
+  woodCount += 1
+  console.log("woodCount", woodCount)
 }
 
 function addBrick () {
-  console.log("add brick")
+  brickCount += 1
+  console.log("brickCount", brickCount)
 }
 
-function addWheart () {
-  console.log("add wheat")
+function addWheat () {
+  wheatCount += 1
+  console.log("wheatCount", wheatCount)
 }
 
 function addRock () {
-  console.log("add rock")
+  rockCount += 1
+  console.log("rockCount", rockCount)
 }
 
 function addSheep () {
-  console.log("add sheep")
+  sheepCount += 1
+  console.log("sheepCount", sheepCount)
 }
